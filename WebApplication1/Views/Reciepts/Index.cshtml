@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model List<DTO.RecieptDTO>
+
+<h1>Receipts List</h1>
+
+
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+
+        @foreach (var reciept in Model)
+        {
+            <div class="row"
+                    style="display: flex; justify-content: space-between; cursor: pointer; border-bottom: 2px solid #007bff"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="right"
+                    data-bs-custom-class="custom-tooltip"
+                    data-bs-html="true"
+                    data-bs-original-title='
+                    <div style="position:absolute; z-index:9999;">
+                        <div><strong>Apartment:</strong> @reciept.Apartment</div>
+                        <div><strong>Tenant:</strong> @reciept.NameOfTenent</div>
+                        <div><strong>Payment:</strong> @reciept.PaymentAmount</div>
+                    </div>'
+
+
+                    >
+
+                <p class="col">Apartment @reciept.Apartment @reciept.NameOfTenent</p>
+                <p class="col">@reciept.PaymentAmount</p>
+            </div>
+        }
+    </div>
+</div>
+
+
