@@ -1,4 +1,4 @@
-﻿
+﻿@using System.Globalization
 @{
     ViewBag.Title = "Index";
 }
@@ -7,33 +7,50 @@
 
 <h1>Receipts List</h1>
 
+<div class="container">
+    <div class="row">
 
-
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-
-        @foreach (var reciept in Model)
+        @foreach (var monthYearGroup in Model.GroupBy(rec => new { rec.DateOfPayment.Month, rec.DateOfPayment.Year }))
         {
-            <div class="row"
-                    style="display: flex; justify-content: space-between; cursor: pointer; border-bottom: 2px solid #007bff"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="right"
-                    data-bs-custom-class="custom-tooltip"
-                    data-bs-html="true"
-                    data-bs-original-title='
-                    <div style="position:absolute; z-index:9999;">
-                        <div><strong>Apartment:</strong> @reciept.Apartment</div>
-                        <div><strong>Tenant:</strong> @reciept.NameOfTenent</div>
-                        <div><strong>Payment:</strong> @reciept.PaymentAmount</div>
-                    </div>'
+            <div class="col-sm-6 mb-3 mb-sm-0">
 
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Payments for @CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(@monthYearGroup.Key.Month) @monthYearGroup.Key.Year</h5>
 
-                    >
+                        @foreach (var reciept in monthYearGroup)
+                        {
+                            <div class="row"
+                                    style="display: flex; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #007bff"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-html="true"
+                                    data-bs-original-title='
 
-                <p class="col">Apartment @reciept.Apartment @reciept.NameOfTenent</p>
-                <p class="col">@reciept.PaymentAmount</p>
+                                         <div class="card">
+                                            <div class="card-body">
+                                                    <p class="card-title"><strong>Reciept no`: @reciept.ID</strong></p>
+                                                    <p>Date: @reciept.DateOfPayment.ToString("dd-MM-yyyy")</p>
+
+                                                    <p>Payment Amount: @reciept.PaymentAmount</p>
+                                                    <p>Month: @reciept.Month</p>
+
+                                                    <p>Payment Method: @reciept.PaymentMethod</p>
+                                                </div>
+                                        </div>'
+                                >
+
+                                <p class="col">Apartment @reciept.Apartment @reciept.NameOfTenent</p>
+                                <p class="col">@reciept.PaymentAmount</p>
+                            </div>
+                        }
+                    </div>
+
+                </div>
             </div>
+
+            
         }
     </div>
 </div>

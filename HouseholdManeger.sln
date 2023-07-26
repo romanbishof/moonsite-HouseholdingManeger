@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{28003C96-34D4-4097-A9BE-866397A4AA94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moonsiteHouseholdeManeger.web", "moonsiteHouseholdeManeger.web\moonsiteHouseholdeManeger.web.csproj", "{8660BFCE-132E-42F2-A2C5-D77025D81467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "moonsiteHouseholdeManeger.Core", "moonsiteHouseholdeManeger.Core\moonsiteHouseholdeManeger.Core.csproj", "{0F74C6F8-7C19-46F1-ADB9-D1DFBB57264D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{28003C96-34D4-4097-A9BE-866397A4AA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28003C96-34D4-4097-A9BE-866397A4AA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28003C96-34D4-4097-A9BE-866397A4AA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8660BFCE-132E-42F2-A2C5-D77025D81467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8660BFCE-132E-42F2-A2C5-D77025D81467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8660BFCE-132E-42F2-A2C5-D77025D81467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8660BFCE-132E-42F2-A2C5-D77025D81467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F74C6F8-7C19-46F1-ADB9-D1DFBB57264D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F74C6F8-7C19-46F1-ADB9-D1DFBB57264D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F74C6F8-7C19-46F1-ADB9-D1DFBB57264D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F74C6F8-7C19-46F1-ADB9-D1DFBB57264D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
