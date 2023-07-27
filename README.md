@@ -47,12 +47,15 @@ Right now the email is created in the local folder - feature development will be
 ```
 
 * Include the nuget packages:
-```
+``
     under moonsiteHouseholderManager.web click on reference -> manage nuget packages
     choose:  umbraco.sqlserverce, umbracocms, umbracocms.core, umbracocmsweb
 
     under moonsiteHouseholderManager.web click on reference -> manage nuget packages
     choose:  umbraco.sqlserverce, umbracocms.core, umbracocms.web
+
+    if the file doesn't exists:
+    Project -> Manage Nuget Packages -> install the necessary 
 
 ```
 * Please create a folder:
