@@ -48,3 +48,6 @@ Toolkit popup nice feature:
 ```
      right click on "moonsiteHouseholdeManager.web" -> debug -> start new instance
 ```
+
+# Routing
+The webpage automatically will be onpend on the "paymet page" and there is a field on the top of the screen to navigate to the reciepts page
