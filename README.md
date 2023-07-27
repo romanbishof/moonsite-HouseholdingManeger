@@ -22,6 +22,10 @@ Toolkit popup nice feature:
 ![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/30a11989-323f-499e-b16e-837afeb0a7c8)
 
 
+Sending email feature:
+
+Right now the email created at the local folder
+
 
 ## Running the Samples From the Command Line
 * Clone this repository:
@@ -43,7 +47,10 @@ Toolkit popup nice feature:
     choose:  umbraco.sqlserverce, umbracocms.core, umbracocms.web
 
 ```
-
+* Please create a folder:
+  ```
+  c:\temp\mail
+  ```
 * Run the project
 ```
      right click on "moonsiteHouseholdeManager.web" -> debug -> start new instance
