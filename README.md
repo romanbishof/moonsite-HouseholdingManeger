@@ -28,6 +28,12 @@ Toolkit popup nice feature:
 ```
     $ git clone https://github.com/romanbishof/moonsite-HouseholdingManeger.git
 ```
+
+* Open the folder via your code editor (i used visual studio):
+```
+    $ git clone https://github.com/romanbishof/moonsite-HouseholdingManeger.git
+```
+
 * Include the nuget packages:
 ```
     under moonsiteHouseholderManager.web click on reference -> manage nuget packages
@@ -37,11 +43,8 @@ Toolkit popup nice feature:
     choose:  umbraco.sqlserverce, umbracocms.core, umbracocms.web
 
 ```
- * Build the project 
-```
-     dotnet build
-```
+
 * Run the project
 ```
-     dotnet run
+     right click on "moonsiteHouseholdeManager.web" -> debug -> start new instance
 ```
