@@ -3,28 +3,36 @@
 
 This is the householdingManger project, it allows you to manage your tenant payments in a digital system, and get a report for each month and payment status, allso you can fill in your tenant payment information, and your database will be updated as needed. 
 
-Main Page:
+*Main Page:
 
-![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/cc03b129-4107-4a16-a489-2738325f33f5)
-
-
-Report Page:
-
-![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/e3514644-560e-4055-a7fb-eb5eb101fbeb)
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/c61e02a2-9b1d-475f-9cbd-a380b91cd5d9)
 
 
-![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/6755098a-ceea-40d3-a55b-3581ae297805)
+*Report Page:
+
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/c84c5761-65ff-4929-8ea6-4cb6a4b63fad)
 
 
 
-Toolkit popup nice feature:
-
-![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/30a11989-323f-499e-b16e-837afeb0a7c8)
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/03662341-f147-4ad4-92f6-6c79ecfafdee)
 
 
-Sending email feature:
 
-Right now the email created at the local folder
+*Toolkit popup nice feature:
+
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/2b9744db-00a4-4819-afbc-674aa34027e3)
+
+
+*Sending email feature:
+located at - RecieptController.cs and web.config
+
+Right now the email is created in the local folder - feature development will be done 
+
+
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/fc4646f2-0194-4577-9450-664c92e85bb0)
+
+![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/02f0a55c-a018-4cfa-9718-ed1fa5b8f767)
+
 
 
 ## Running the Samples From the Command Line
