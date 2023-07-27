@@ -361,6 +361,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{2a6d2873-cf5c-4258-a020-452411aee192}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{28003c96-34d4-4097-a9be-866397a4aa94}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\moonsiteHouseholdeManeger.Core\moonsiteHouseholdeManeger.Core.csproj">
       <Project>{0f74c6f8-7c19-46f1-adb9-d1dfbb57264d}</Project>
       <Name>moonsiteHouseholdeManeger.Core</Name>

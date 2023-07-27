@@ -24,7 +24,6 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Index(RecieptDTO recieptModel)
         {
-            //Receipt newFormReciept= new Receipt();
 
             RecieptDTO newRecieptModel = new RecieptDTO();
 

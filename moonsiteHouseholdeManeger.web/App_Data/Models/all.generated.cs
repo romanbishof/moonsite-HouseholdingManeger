@@ -6,8 +6,8 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "108db2e4c7d20d24")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "19d104dae963436c")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
 // FILE: models.generated.cs
@@ -122,6 +122,126 @@ namespace Umbraco.Web.PublishedModels
 
 		// ctor
 		public Reciepts(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+	}
+
+	/// <summary>Reciept</summary>
+	[PublishedModel("reciept")]
+	public partial class Reciept : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const string ModelTypeAlias = "reciept";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Reciept, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Reciept(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Apartment: nomber of apartment
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("apartment")]
+		public virtual int Apartment => this.Value<int>("apartment");
+
+		///<summary>
+		/// Date of Payment: when was the payment
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("dateOfPayment")]
+		public virtual global::System.DateTime DateOfPayment => this.Value<global::System.DateTime>("dateOfPayment");
+
+		///<summary>
+		/// Month of Payment: for witch month the payment was
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("monthOfPayment")]
+		public virtual string MonthOfPayment => this.Value<string>("monthOfPayment");
+
+		///<summary>
+		/// Payment amount
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("paymentAmount")]
+		public virtual decimal PaymentAmount => this.Value<decimal>("paymentAmount");
+
+		///<summary>
+		/// Payment method
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("paymentMethod")]
+		public virtual string PaymentMethod => this.Value<string>("paymentMethod");
+
+		///<summary>
+		/// Tenant Name: Tenant name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		[ImplementPropertyType("tenantName")]
+		public virtual string TenantName => this.Value<string>("tenantName");
+	}
+
+	/// <summary>RecieptsList</summary>
+	[PublishedModel("recieptsList")]
+	public partial class RecieptsList : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const string ModelTypeAlias = "recieptsList";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<RecieptsList, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public RecieptsList(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+	}
+
+	/// <summary>Data</summary>
+	[PublishedModel("data")]
+	public partial class Data : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const string ModelTypeAlias = "data";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Data, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Data(IPublishedContent content)
 			: base(content)
 		{ }
 

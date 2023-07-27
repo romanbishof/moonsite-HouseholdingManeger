@@ -9,6 +9,8 @@ namespace moonsiteHouseholdeManeger.Core.ViewModels
 {
     public class RecieptFormViewModel
     {
+
+        public Guid BlogPostUmbracoKey { get; set; }
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Tenant name is required.")]
