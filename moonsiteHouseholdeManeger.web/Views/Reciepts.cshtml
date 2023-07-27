@@ -1,10 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Reciepts>
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using System.Globalization
 @{
 	Layout = "Main.cshtml";
 }
 
-<h1>reciepts</h1>
 <!-- Reciepts -->
 
 
@@ -19,16 +19,51 @@
         <div class="col">
             <div class="card-deck">
 
-                @foreach (var item in selection)
+
+                @foreach (var monthYearGroup in selection.GroupBy(rec => new { rec.Value<DateTime>("DateOfPayment").Month, rec.Value<DateTime>("DateOfPayment").Year }))
                 {
-                    <div class="card-body">
-                        <h5 class="card-title">@item.Name</h5>
+                    <div class="row">
 
-                        <p class="col">Apartment @item.Value("Apartment") @item.Value("TenantName")</p>
-                        <p class="col">@item.Value("PaymentAmount")</p>
+                        <div class="card col-md-4" >
+                            <div class="card-body">
+                                <h5 class="card-title">@CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(@monthYearGroup.Key.Month) @monthYearGroup.Key.Year</h5>
 
+                                @foreach (var item in monthYearGroup)
+                                {
+
+
+                                    <div class="row"
+                                         style="display: flex; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #007bff"
+                                         data-bs-toggle="tooltip"
+                                         data-bs-placement="top"
+                                         data-bs-custom-class="custom-tooltip"
+                                         data-bs-html="true"
+                                         data-bs-original-title='
+
+                                                <div class="card">
+                                                <div class="card-body ">
+                                                        <p class="card-title"><strong>@item.Id `קבלה מס</strong></p>
+                                                        <p>@item.CreateDate.ToString("dd-MM-yyyy") בתאריך</p>
+
+                                                        <p>@item.Value("PaymentAmount"):סכום התשלום</p>
+                                                        <p> @item.CreateDate.Year @item.Value("MonthOfPayment") :עבור חודש</p>
+
+                                                        <p>@item.Value("PaymentMethod") ברמצעות</p>
+                                                    </div>
+                                                </div>'
+                                    >
+
+                                                <p class="col">ש"ח @item.Value("PaymentAmount") </p>
+                                                <p class="col">@item.Value("TenantName") @item.Value("Apartment") דירה</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
                     </div>
                 }
+
+
+
 
             </div>
         </div>

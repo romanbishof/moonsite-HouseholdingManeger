@@ -37,7 +37,7 @@ namespace moonsiteHouseholdeManeger.Core.Controllers
             if(RecieptList != null)
             {
                 int payment = (vm.PaymentAmount / vm.Monthes.Count);
-                var date = DateTime.Now.ToString("dd-MM-yyyy");
+                var date = DateTime.Now.Date;
 
                 foreach (var month in vm.Monthes)
                 {

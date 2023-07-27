@@ -1,7 +1,12 @@
 ﻿@model moonsiteHouseholdeManeger.Core.ViewModels.RecieptFormViewModel
 @using moonsiteHouseholdeManeger.Core.Controllers
+@{ 
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+}
 @using (Html.BeginUmbracoForm<RecieptController>("HandleRecieptForm"))
 {
+
     <div class="form-group">
         <label for="nameOfTenent" class="form-label">Name of Tenent</label>
         <input type="text" class="form-control" id="nameOfTenent" name="NameOfTenent" value="@Model.NameOfTenent">
