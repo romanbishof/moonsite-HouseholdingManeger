@@ -48,13 +48,13 @@
                                                         <p>@item.Value("PaymentAmount"):סכום התשלום</p>
                                                         <p> @item.CreateDate.Year @item.Value("MonthOfPayment") :עבור חודש</p>
 
-                                                        <p>@item.Value("PaymentMethod") ברמצעות</p>
+                                                        <p>@item.Value("PaymentMethod") באמצעות</p>
                                                     </div>
                                                 </div>'
                                     >
 
                                                 <p class="col">ש"ח @item.Value("PaymentAmount") </p>
-                                                <p class="col">@item.Value("TenantName") @item.Value("Apartment") דירה</p>
+                                                <p class="col">דירה  @item.Value("Apartment") @item.Value("TenantName")</p>
                                     </div>
                                 }
                             </div>

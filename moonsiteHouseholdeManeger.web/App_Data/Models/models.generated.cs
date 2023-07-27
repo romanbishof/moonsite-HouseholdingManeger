@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6afd0dfaa0039a5e")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "97dbace789fd157b")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -48,18 +48,18 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Site Name: The name of the website display purposes
+		/// Email settings admin account
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
-		[ImplementPropertyType("siteName")]
-		public virtual string SiteName => this.Value<string>("siteName");
+		[ImplementPropertyType("emailSettingsAdminAccount")]
+		public virtual string EmailSettingsAdminAccount => this.Value<string>("emailSettingsAdminAccount");
 
 		///<summary>
-		/// Test Mode: Flag ti indicate if the site in test mode
+		/// Email Settings from address: Email Settings from address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
-		[ImplementPropertyType("testMode")]
-		public virtual bool TestMode => this.Value<bool>("testMode");
+		[ImplementPropertyType("emailSettingsFromAddress")]
+		public virtual string EmailSettingsFromAddress => this.Value<string>("emailSettingsFromAddress");
 	}
 
 	/// <summary>Home</summary>

@@ -6,123 +6,126 @@
 }
 @using (Html.BeginUmbracoForm<RecieptController>("HandleRecieptForm"))
 {
+    <div class="container">
 
-    <div class="form-group">
-        <label for="nameOfTenent" class="form-label">Name of Tenent</label>
-        <input type="text" class="form-control" id="nameOfTenent" name="NameOfTenent" value="@Model.NameOfTenent">
-        @Html.ValidationMessageFor(m => m.NameOfTenent, "", new { @class = "text-danger" })
-    </div>
 
-    <div class="form-group">
-        <label for="apartment" class="form-label">Apartment</label>
-        <select class="form-select" id="apartment" name="Apartment" aria-label="Apartments">
-            <option value="">Select apartment</option>
-            <option value="1" @(Model.Apartment == 1 ? "selected" : "")>1</option>
-            <option value="2" @(Model.Apartment == 2 ? "selected" : "")>2</option>
-            <option value="3" @(Model.Apartment == 3 ? "selected" : "")>3</option>
-        </select>
-        @Html.ValidationMessageFor(m => m.Apartment, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group form-check">
-        <label for="monthes" class="form-label">Payment Month</label>
-        <br />
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="january" name="Monthes" value="january" )>
-            <label class="form-check-label" for="january">january</label>
+        <div class="form-group">
+            <label for="nameOfTenent" class="form-label">שם דייר</label>
+            <input type="text" class="form-control" id="nameOfTenent" name="NameOfTenent" value="@Model.NameOfTenent">
+            @Html.ValidationMessageFor(m => m.NameOfTenent, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="febuary" name="Monthes" value="febuary" )>
-            <label class="form-check-label" for="febuary">febuary</label>
+        <div class="form-group">
+            <label for="apartment" class="form-label">דירה</label>
+            <select class="form-select" id="apartment" name="Apartment" aria-label="Apartments">
+                <option value="">אנא בחר מספר דירה</option>
+                <option value="1" @(Model.Apartment == 1 ? "selected" : "")>1</option>
+                <option value="2" @(Model.Apartment == 2 ? "selected" : "")>2</option>
+                <option value="3" @(Model.Apartment == 3 ? "selected" : "")>3</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Apartment, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="martch" name="Monthes" value="martch" )>
-            <label class="form-check-label" for="martch">martch</label>
+        <div class="form-group form-check">
+            <label for="monthes" class="form-label">חודשי תשלום</label>
+            <br />
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="january" name="Monthes" value="ינואר" )>
+                <label class="form-check-label" for="january">ינואר</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="febuary" name="Monthes" value="פבואר" )>
+                <label class="form-check-label" for="febuary">פבואר</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="martch" name="Monthes" value="מרץ" )>
+                <label class="form-check-label" for="martch">מרץ</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="april" name="Monthes" value="אפריל" )>
+                <label class="form-check-label" for="april">אפריל</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="may" name="Monthes" value="מאי" )>
+                <label class="form-check-label" for="may">מאי</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="june" name="Monthes" value="יוני" )>
+                <label class="form-check-label" for="june">יוני</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="july" name="Monthes" value="יולי" )>
+                <label class="form-check-label" for="july">יולי</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="august" name="Monthes" value="אוגוסט" )>
+                <label class="form-check-label" for="august">אוגוסט</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="september" name="Monthes" value="ספטמבר" )>
+                <label class="form-check-label" for="september">ספטמבר</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="october" name="Monthes" value="אוקטובר" )>
+                <label class="form-check-label" for="october">אוקטובר</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="november" name="Monthes" value="נובמבר" )>
+                <label class="form-check-label" for="november">נובמבר</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="december" name="Monthes" value="דצמבר" )>
+                <label class="form-check-label" for="december">דצמבר</label>
+            </div>
+            @Html.ValidationMessageFor(m => m.Monthes, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="april" name="Monthes" value="april" )>
-            <label class="form-check-label" for="april">april</label>
+        <div class="form-group">
+            <label for="paymentMethod" class="form-label">אמצעי תשלום</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="PaymentMethod" id="creditCard" value="כרטיס אשראי" checked>
+                <label class="form-check-label" for="creditCard">
+                    כרטיס אשראי
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="PaymentMethod" id="cash" value="מזומן" )>
+                <label class="form-check-label" for="cash">
+                    מזומן
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="PaymentMethod" id="check" value="צ'ק" )>
+                <label class="form-check-label" for="check">
+                    צ'ק
+                </label>
+            </div>
+            @Html.ValidationMessageFor(m => m.PaymentMethod, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="may" name="Monthes" value="may" )>
-            <label class="form-check-label" for="may">may</label>
+        <div class="form-group">
+            <label for="paymentAmount" class="form-label">סכום לתשלום</label>
+            <input type="number" class="form-control" id="paymentAmount" name="PaymentAmount" value="@Model.PaymentAmount">
+            @Html.ValidationMessageFor(m => m.PaymentAmount, "", new { @class = "text-danger" })
         </div>
 
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="june" name="Monthes" value="june" )>
-            <label class="form-check-label" for="june">june</label>
+        <div class="form-group">
+
+            <button type="submit" class="btn btn-primary">שמור</button>
+
         </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="july" name="Monthes" value="july" )>
-            <label class="form-check-label" for="july">july</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="august" name="Monthes" value="august" )>
-            <label class="form-check-label" for="august">august</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="september" name="Monthes" value="september" )>
-            <label class="form-check-label" for="september">september</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="october" name="Monthes" value="october" )>
-            <label class="form-check-label" for="october">october</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="november" name="Monthes" value="november" )>
-            <label class="form-check-label" for="november">november</label>
-        </div>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="december" name="Monthes" value="december" )>
-            <label class="form-check-label" for="december">december</label>
-        </div>
-        @Html.ValidationMessageFor(m => m.Monthes, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <label for="paymentMethod" class="form-label">Paymont Method</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="PaymentMethod" id="creditCard" value="creditCard" checked>
-            <label class="form-check-label" for="creditCard">
-                Creditcard
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="PaymentMethod" id="cash" value="cash" )>
-            <label class="form-check-label" for="cash">
-                Cash
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="PaymentMethod" id="check" value="check" )>
-            <label class="form-check-label" for="check">
-                check
-            </label>
-        </div>
-        @Html.ValidationMessageFor(m => m.PaymentMethod, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-        <label for="paymentAmount" class="form-label">Payment Amount</label>
-        <input type="number" class="form-control" id="paymentAmount" name="PaymentAmount" value="@Model.PaymentAmount">
-        @Html.ValidationMessageFor(m => m.PaymentAmount, "", new { @class = "text-danger" })
-    </div>
-
-    <div class="form-group">
-
-        <button type="submit" class="btn btn-primary">Save</button>
-
     </div>
 }
 

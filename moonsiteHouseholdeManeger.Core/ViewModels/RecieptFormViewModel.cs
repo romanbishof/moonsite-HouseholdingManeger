@@ -13,24 +13,24 @@ namespace moonsiteHouseholdeManeger.Core.ViewModels
         public Guid BlogPostUmbracoKey { get; set; }
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "Tenant name is required.")]
-        [RegularExpression(@"^[A-Za-z\s]+$", ErrorMessage = "Tenant name should contain only letters and spaces.")]
+        [Required(ErrorMessage = "יש למלא את שם הדייר")]
+        [RegularExpression(@"^[\u0590-\u05FF\s]+$", ErrorMessage = "שם הדייר יכול להכיל אותיות ורווחים בלבד")]
         public string NameOfTenent { get; set; }
 
-        [Required(ErrorMessage = "Please select an apartment")]
+        [Required(ErrorMessage = "אנא בחר דירה")]
         public int Apartment { get; set; }
         public DateTime DateOfPayment { get; set; }
 
-        [Required(ErrorMessage = "Please select payment method")]
+        [Required(ErrorMessage = "אנא בחר אמצעי תשלום")]
         public string PaymentMethod { get; set; }
 
-        [Required(ErrorMessage = "Please write the amount of payment")]
-        [RegularExpression(@"^[1-9][0-9]*$", ErrorMessage = "Payment amount should contain only numbers and cannot be 0.")]
+        [Required(ErrorMessage = "נא למלא את סכום התשלום")]
+        [RegularExpression(@"^[1-9][0-9]*$", ErrorMessage = "יש לבחור ערכים מספריים בלבד")]
         public int PaymentAmount { get; set; }
         public string Month { get; set; }
 
 
-        [Required(ErrorMessage = "Please choose month/s of payment")]
+        [Required(ErrorMessage = "יש לבחור לפחות חודש אחד לתשלום")]
         public List<string> Monthes { get; set; }
     }
 }
