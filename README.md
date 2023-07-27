@@ -18,7 +18,7 @@ Toolkit popup nice feature:
 ```
     $ git clone https://github.com/romanbishof/moonsite-HouseholdingManeger.git
 ```
-* Include the nuget packages(https://github.com/AuthorizeNet/sdk-dotnet):
+* Include the nuget packages:
 ```
     under moonsiteHouseholderManager.web click on reference -> manage nuget packages
     choose:  umbraco.sqlserverce, umbracocms, umbracocms.core, umbracocmsweb
