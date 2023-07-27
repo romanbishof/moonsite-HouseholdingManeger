@@ -7,27 +7,32 @@
 <h1>reciepts</h1>
 <!-- Reciepts -->
 
+
 @{
 	var selection = Umbraco.Content(Guid.Parse("151260c2-ba3c-49da-97b8-474f5d2392e6"))
     .ChildrenOfType("reciept")
     .Where(x => x.IsVisible())
     .OrderByDescending(x => x.CreateDate);
 }
-
 <div class="container">
     <div class="row">
         <div class="col">
             <div class="card-deck">
-                
+
                 @foreach (var item in selection)
-            	{
-            		<div class="card-body">
-                        <h5 class="card-title">Payments for </h5>
-                       
+                {
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+
+                        <p class="col">Apartment @item.Value("Apartment") @item.Value("TenantName")</p>
+                        <p class="col">@item.Value("PaymentAmount")</p>
+
                     </div>
-            	}
-                
+                }
+
             </div>
         </div>
     </div>
 </div>
+
+
