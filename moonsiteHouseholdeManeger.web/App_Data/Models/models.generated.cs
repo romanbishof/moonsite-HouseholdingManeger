@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "19d104dae963436c")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6afd0dfaa0039a5e")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -151,7 +151,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.8")]
 		[ImplementPropertyType("dateOfPayment")]
-		public virtual global::System.DateTime DateOfPayment => this.Value<global::System.DateTime>("dateOfPayment");
+		public virtual string DateOfPayment => this.Value<string>("dateOfPayment");
 
 		///<summary>
 		/// Month of Payment: for witch month the payment was

@@ -36,15 +36,24 @@ namespace moonsiteHouseholdeManeger.Core.Controllers
 
             if(RecieptList != null)
             {
+                int payment = (vm.PaymentAmount / vm.Monthes.Count);
+                var date = DateTime.Now.ToString("dd-MM-yyyy");
 
+                foreach (var month in vm.Monthes)
+                {
 
-                var newReciept = Services.ContentService.Create("Reciept", RecieptList.Id, "Reciept");
-                newReciept.SetValue("TenantName", vm.NameOfTenent);
-                newReciept.SetValue("Apartment", vm.Apartment);
-                newReciept.SetValue("PaymentMethod", vm.PaymentMethod);
-                newReciept.SetValue("PaymentAmount", vm.PaymentAmount);
+                    var newReciept = Services.ContentService.Create("Reciept", RecieptList.Id, "Reciept");
+                    newReciept.SetValue("TenantName", vm.NameOfTenent);
+                    newReciept.SetValue("Apartment", vm.Apartment);
+                    newReciept.SetValue("MonthOfPayment", month);
+                    newReciept.SetValue("DateOfPayment", date);
+                    newReciept.SetValue("PaymentMethod", vm.PaymentMethod);
+                    newReciept.SetValue("PaymentAmount", payment);
 
-                Services.ContentService.SaveAndPublish(newReciept);
+                    Services.ContentService.SaveAndPublish(newReciept);
+
+                }
+
             }
 
             TempData["status"] = "OK";
