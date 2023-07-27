@@ -26,7 +26,7 @@ This is the householdingManger project, it allows you to manage your tenant paym
 * Sending email feature:
 located at - RecieptController.cs and web.config
 
-Right now the email is created in the local folder - feature development will be done 
+Right now the email is created in the local folder - future development will be done 
 
 
 ![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/fc4646f2-0194-4577-9450-664c92e85bb0)
@@ -41,12 +41,12 @@ Right now the email is created in the local folder - feature development will be
     $ git clone https://github.com/romanbishof/moonsite-HouseholdingManeger.git
 ```
 
-* Open the folder via your code editor (i used visual studio):
+* Open the folder via your code editor (I used visual studio):
 ```
-    $ git clone https://github.com/romanbishof/moonsite-HouseholdingManeger.git
+   =)
 ```
 
-* Include the nuget packages:
+* Include the Nuget packages:
 ```
     under moonsiteHouseholderManager.web click on reference -> manage nuget packages
     choose:  umbraco.sqlserverce, umbracocms, umbracocms.core, umbracocmsweb
@@ -55,7 +55,7 @@ Right now the email is created in the local folder - feature development will be
     choose:  umbraco.sqlserverce, umbracocms.core, umbracocms.web
 
     if the file doesn't exists:
-    Project -> Manage Nuget Packages -> install the necessary 
+    Project -> Manage Nuget Packages ->Install the necessary 
 
 ```
 * Please create a folder:
@@ -69,7 +69,7 @@ Right now the email is created in the local folder - feature development will be
 
 
 # Troubleshutting:
-  if error Could not find file ... bin\roslyn\csc.exe accrues
+  if error Could not find the  file ... bin\roslyn\csc.exe accrues
   open the Nuget console and run: 
   ```
   Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
