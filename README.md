@@ -67,5 +67,13 @@ Right now the email is created in the local folder - feature development will be
      right click on "moonsiteHouseholdeManager.web" -> debug -> start new instance
 ```
 
+
+# Troubleshutting:
+  if error Could not find file ... bin\roslyn\csc.exe accrues
+  open the Nuget console and run: 
+  ```
+  Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+  ```
+
 # Routing
-The webpage automatically will be onpend on the "paymet page" and there is a field on the top of the screen to navigate to the reciepts page
+The webpage automatically will be opened on the "payment page" and there is a field on the top of the screen to navigate to the reciepts page
