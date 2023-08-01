@@ -68,6 +68,16 @@ Right now the email is created in the local folder - future development will be 
 ```
 
 
+# Uploading the database
+1. via SQL server object explorer create a new empty database named: MoonsiteHouseholdManeger
+2. right-click on it and chose Publish data-tier application
+3. browse to  DataBaseBackup folder select housholddata.dacpac file and click on publish (press "yes" whether a popup shows up)
+   ![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/edf85ee2-f392-4d2e-8356-a54bb9996991)
+4. wait for data to be published
+   ![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/39ca90f9-7c13-4fea-829e-0820fe13079a)
+   ![image](https://github.com/romanbishof/moonsite-HouseholdingManeger/assets/76264579/5f782ba4-c19d-4e39-b1d5-c4e171544eb8)
+
+ 
 # Troubleshutting:
   if error Could not find the  file ... bin\roslyn\csc.exe accrues
   open the Nuget console and run: 
