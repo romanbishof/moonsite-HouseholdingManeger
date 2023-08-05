@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	    var selection = Umbraco.ContentAtRoot().FirstOrDefault()
+        .Children()
+        .Where(x => x.IsVisible());
+    }
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Household Maneger</a>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    @foreach (var item in selection)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@item.Url()">@item.Name()</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>

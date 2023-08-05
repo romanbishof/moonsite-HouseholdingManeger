@@ -1,0 +1,72 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Reciepts>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using System.Globalization;
+@{
+	Layout = "MasterLayout.cshtml";
+}
+
+
+@{
+    var selection = Umbraco.Content(Guid.Parse("20454434-ec03-4511-96d0-3591afaa44fb"))
+    .ChildrenOfType("recieptForm")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card-deck">
+
+
+                @foreach (var monthYearGroup in selection.GroupBy(rec => new { rec.Value<DateTime>("DateOfPayment").Month, rec.Value<DateTime>("DateOfPayment").Year }))
+                {
+                        <div class="row">
+
+                            <div class="card col-md-4" >
+                                <div class="card-body">
+                                    <h5 class="card-title">@CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(@monthYearGroup.Key.Month) @monthYearGroup.Key.Year</h5>
+
+                                @foreach (var item in monthYearGroup)
+                                {
+
+
+                                            <div class="row"
+                                         style="display: flex; justify-content: space-between; cursor: pointer; border-bottom: 1px solid #007bff"
+                                         data-bs-toggle="tooltip"
+                                         data-bs-placement="top"
+                                         data-bs-custom-class="custom-tooltip"
+                                         data-bs-html="true"
+                                         data-bs-original-title='
+
+                                                <div class="card">
+                                                <div class="card-body ">
+                                                        <p class="card-title"><strong>@item.Id `קבלה מס</strong></p>
+                                                        <p>@item.CreateDate.ToString("dd-MM-yyyy") בתאריך</p>
+
+                                                        <p>@item.Value("PaymentAmount"):סכום התשלום</p>
+                                                        <p> @item.CreateDate.Year @item.Value("MonthOfPayment") :עבור חודש</p>
+
+                                                        <p>@item.Value("PaymentMethod") באמצעות</p>
+                                                    </div>
+                                                </div>'
+                                    >
+
+                                                        <p class="col">ש"ח @item.Value("PaymentAmount") </p>
+                                                        <p class="col">דירה  @item.Value("Apartment") @item.Value("TenantName")</p>
+                                            </div>
+                                }
+                                </div>
+                            </div>
+                        </div>
+                }
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

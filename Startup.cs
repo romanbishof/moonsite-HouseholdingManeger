@@ -1,4 +1,4 @@
-namespace MoonsiteHouseholdManeger
+namespace MoonsiteHouseholdManeger.web
 {
     public class Startup
     {

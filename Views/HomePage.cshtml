@@ -1,0 +1,11 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using MoonsiteHouseholdManeger.web.Models;
+@*@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>*@
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "MasterLayout.cshtml";
+}
+
+@{
+	Html.RenderPartial("~/Views/Partials/RecieptForm.cshtml", new RecieptFormModel());
+}
